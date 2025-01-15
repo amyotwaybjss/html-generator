@@ -1,6 +1,7 @@
 # let's work with fruit trees for the example
 # a tree has a species name and a genus name, it also has a group it belongs to
-# a tree may be dormant (inactive), flowering (semi-active) or fruiting (active in use)
+# a tree may be:
+# # old (inactive), growing (testing), dormant (semi-active), flowering (active, not in use) or fruiting (active, in use)
 # when fruiting, it has several qualities, such as location, fruit colour, fruit shape...
 # these qualities are optional and may depend on location.
 # potentially each tree has a short description to say what it looks like
