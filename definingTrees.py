@@ -18,11 +18,10 @@ class Tree:
         if status.lower() == 'fruiting' and location is None:
             raise ValueError(f'Fruiting Tree must have location')
         self.location = location
-        # note that in the init statement, adding = 'something' gives a default of 'something'
-        # this makes the attribute optional
         Tree.tree_list.append(self)
 
     def __str__(self):
+        # This defines how the items in tree_list will be displayed when looped
         return (f'{self.group.upper()}: '
                 f'{self.species.title()}'
                 f'{'' if self.genus is None else ', ' + str(self.genus).title()}. '
