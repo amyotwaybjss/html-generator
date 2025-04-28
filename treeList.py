@@ -1,20 +1,8 @@
-from definingTrees import Tree
-# import pandas as pd
-
-# Creating trees:
-gala = Tree('gala', 'RoYal', 'Apple', 'Fruiting', 'Plot 1')
-golden = Tree('delicious', 'golden', 'Apple', 'Fruiting', 'Plot 1')
-w_grape = Tree('grape', 'white', 'Grape', 'Fruiting', 'Plot 2')
-r_grape = Tree('grape', 'red', 'Grape', 'flowering')
-orange = Tree('orange', None, 'orange', 'flowering')
-
-# print(gala)
-
-# this prints all trees
+import treeDirectory
 
 count = 0
 
-for item in Tree.tree_list:
+for item in treeDirectory.all_trees:
     print(item)
     count += 1
 
