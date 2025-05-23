@@ -1,18 +1,19 @@
-Let's work with fruit trees for the example
+Trees - the statuses we care about initially are: 
+1. In a field
+2. Active, but not in a field
+3. Inactive, but used to be in a field
+4. Inactive, dormant
 
-A tree has a species name and a genus name, it also has a group it belongs to
+For a basic tree we want to include the following information:
+* Species, Genus (optional), Group, Status, Tag(s)
+* A tree may have one or many tags.
+* Status - can be calculated (if it has a field or not), maybe a function to make it active/inactive?
 
-A tree may be:
-  old (inactive), growing (testing), dormant (semi-active), flowering (active, not in use) or fruiting (active, in use)
-  
-When fruiting, it has several qualities, such as location, fruit colour, fruit shape...
+A field can have multiple trees. A tree can be in multiple fields. A tree may have current and past fields (some of which are relevant).
 
-These qualities are optional and may depend on location.
+For a tree in a field, additional bits of information may be needed (e.g. colour of band).
 
-Potentially each tree has a short description to say what it looks like
-
-Potentially there are images of the tree which vary depending on status of tree (flower or fruit)
-
-Orchard owner is a separate object with different attributes
-
-Aim is to pull up different combinations of these traits in a text block, so that I don't have to write the details
+We want to return:
+* List of all trees by status.
+* For each field, its unique list of trees and traits.
+* This may include images for each tree.
