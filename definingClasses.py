@@ -5,7 +5,7 @@ class Tree:
     tree_statuses = {'old', 'growing', 'dormant', 'flowering', 'fruiting'}
 
     # adding __slots__ prevents new attributes being added
-    def __init__(self, species, genus, group, status, location=None):
+    def __init__(self, species, genus, group, status, tag):
         # note that in the init statement, adding = 'something' gives a default of 'something'
         # this makes the attribute optional
         self.id = (str(species) + str(genus) + str(group)).lower()
@@ -16,6 +16,11 @@ class Tree:
             raise ValueError(f'Unknown status')
         self.status = status
         self.fields = set()
+        if isinstance(tag, (list, set)):
+            self.tag = set(tag)
+        else:
+            self.tag = {tag}
+
         Tree.tree_list.append(self)
 
     def __str__(self):
@@ -30,6 +35,7 @@ class Tree:
     def add_field(self, field):
         self.fields.add(field)
         field.trees.add(self)
+        # Is this needed?
 
 
 class Field:

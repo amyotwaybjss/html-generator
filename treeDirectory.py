@@ -1,11 +1,12 @@
 from definingClasses import Tree, Field
+from images import fruit_image
 
 # Creating trees:
-gala = Tree('gala', 'RoYal', 'Apple', 'Fruiting', 'Plot 1')
-golden = Tree('delicious', 'golden', 'Apple', 'Fruiting', 'Plot 1')
-w_grape = Tree('gr1', 'white', 'Grape', 'Fruiting', 'Plot 2')
-r_grape = Tree('gr2', 'red', 'Grape', 'flowering')
-orange = Tree('orange', None, 'orange', 'flowering')
+gala = Tree('gala', 'RoYal', 'Apple', 'Fruiting', 'hi_im_gala')
+golden = Tree('delicious', 'golden', 'Apple', 'Fruiting', 'hi_im_golden')
+lemon = Tree('lemon', None, 'Citrus', 'Fruiting', 'hi_im_lemon')
+lime = Tree('lime', None, 'Citrus', 'flowering', ['hi_im_lime','surprise_lime'])
+orange = Tree('orange', None, 'orange', 'flowering', 'hi_im_orange')
 # cherry = Tree('cherry', None, 'cherry', 'dormant')
 
 # Creating list containing all trees:
@@ -23,5 +24,4 @@ field_a.add_tree(gala)
 field_b.add_tree(gala)
 field_b.add_tree(golden)
 
-print(f"{golden.species} is in fields: {[f.name for f in golden.fields]}")
-
+print(f"{gala.species} {fruit_image["gala"]} is in fields: {[f.name for f in gala.fields]}")
