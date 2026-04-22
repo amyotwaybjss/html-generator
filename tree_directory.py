@@ -1,5 +1,5 @@
-from definingClasses import Tree, Field
-from images import fruit_image
+from defining_classes import Tree, Field
+from emoji_lookup import fruit_image
 
 # Creating trees:
 gala = Tree('gala', 'RoYal', 'Apple', 'Fruiting', 'hi_im_gala')
