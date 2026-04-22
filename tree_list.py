@@ -1,8 +1,8 @@
-import treeDirectory
+import tree_directory
 
 count = 0
 
-for item in treeDirectory.all_trees:
+for item in tree_directory.all_trees:
     print(item)
     count += 1
 
